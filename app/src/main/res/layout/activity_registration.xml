@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_registration"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/background_material_light"
+    tools:context="com.example.user.tabslocis.RegistrationActivity">
+
+    <TextView
+        android:text="Registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_reg"
+        android:textSize="20dp"
+        android:textColor="@color/colorAccent"
+        android:layout_above="@+id/email_et_reg"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/email_et_reg"
+        android:hint="E-mail"
+        android:textColorHint="@color/colorAccent"
+        android:layout_marginBottom="45dp"
+        android:layout_above="@+id/password_et_reg"
+        android:layout_alignStart="@+id/password_et_reg" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:textColorHint="@color/colorAccent"
+        android:ems="10"
+        android:id="@+id/name_et_reg"
+        android:layout_above="@+id/password_et_reg"
+        android:layout_alignStart="@+id/email_et_reg"
+        android:layout_alignEnd="@+id/password_et_reg" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:textColorHint="@color/colorAccent"
+        android:id="@+id/password_et_reg"
+        android:hint="Password"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="219dp" />
+
+    <Button
+        android:text="Sign Up"
+        android:textColor="@color/background_material_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sign_up_button_reg"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/email_et_reg"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

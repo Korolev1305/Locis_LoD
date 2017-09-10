@@ -1,0 +1,56 @@
+package com.example.user.tabslocis;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.example.user.tabslocis.Api.RegistrationTask;
+
+public class RegistrationActivity extends AppCompatActivity {
+
+    String response;
+    TextView registrationTextView;
+    EditText emailEditText;
+    EditText nameEditText;
+    EditText passEditText;
+    Button registrationButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_registration);
+        registrationTextView = (TextView) findViewById(R.id.tv_reg);
+        emailEditText = (EditText) findViewById(R.id.email_et_reg);
+        nameEditText = (EditText) findViewById(R.id.name_et_reg);
+        passEditText = (EditText) findViewById(R.id.password_et_reg);
+        registrationButton = (Button) findViewById(R.id.sign_up_button_reg);
+        registrationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final RegistrationTask api = new RegistrationTask(nameEditText.getText().toString(), emailEditText.getText().toString(), passEditText.getText().toString());
+                api.execute(getWindow().getContext());
+            }
+        });
+    }
+
+    public void getToken(String token, int responseCode) {
+        switch (responseCode) {
+            case 200:
+                ;
+                break;
+
+            case 403:
+                ;
+                break;
+            case 400:
+                ;
+                break;
+            default:
+                ;
+                break;
+        }
+    }
+}
