@@ -60,4 +60,8 @@ public class InvitesFragment extends Fragment {
         });
 
     }
+
+    public void onJSONParsed(List<ItemInvite> invites) {
+
+    }
 }

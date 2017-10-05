@@ -113,6 +113,9 @@ public class UserActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void getToken(String token, int responseCode) {
+
+    }
 
 
     /**

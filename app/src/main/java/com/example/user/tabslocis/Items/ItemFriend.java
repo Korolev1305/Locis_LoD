@@ -12,4 +12,5 @@ public class ItemFriend {
         this.name = name;
         this.userId = userId;
     }
+    public ItemFriend(){}
 }
